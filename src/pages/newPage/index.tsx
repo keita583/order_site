@@ -217,7 +217,7 @@ export default function Infomation() {
                 }}
             >
                 <Typography variant="h4" sx={{ color: "black", fontWeight: "bold", mb: 2 }}>
-                    Infomation
+                    問い合わせ
                 </Typography>
 
                 <Box sx={{ width: "100%", mb: 2, display: "flex", flexDirection: "row", }}>

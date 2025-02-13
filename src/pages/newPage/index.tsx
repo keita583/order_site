@@ -193,8 +193,8 @@ export default function Infomation() {
                 height: "100vh",
                 backgroundColor: "#E6FFE9",
                 display: "flex",
-                justifyContent: "center",  // 縦方向の中央揃え
-                alignItems: "center",      // 横方向の中央揃え
+                justifyContent: "center",  // 縦方向の中央揃える
+                alignItems: "center",      // 横方向の中央揃える
                 flexDirection: "column",   // 縦に並べる
             }}
         >

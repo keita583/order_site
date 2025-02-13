@@ -87,8 +87,10 @@ const StyledButton = styled(Button)({
 const fullWidthRegex = /^[^\x01-\x7E]{1,20}$/;
 
 const emailSchema = z.string().email("正しいメールアドレスを入力してください");
+
 const firstNameSchema = z.string().max(100, "姓は100文字以内にしてください。").regex(fullWidthRegex, "全角文字のみで入力してください。");
 const lastNameSchema = z.string().max(100, "名は100文字以内にしてください。").regex(fullWidthRegex, "全角文字のみで入力してください。");
+
 const firstPostSchema = z.string().length(3, "郵便番号は3文字で入力してください。").regex(/^[0-9]{3}$/, "半角数字のみで3文字入力してください。");
 const lastPostSchema = z.string().length(4, "郵便番号は4文字で入力してください。").regex(/^[0-9]{4}$/, "半角数字のみで3文字入力してください。");
 const addressSchema = z.string().regex(fullWidthRegex, "全角文字のみで入力してください。");
@@ -373,7 +375,8 @@ export default function Infomation() {
                     color="primary"
 
                 >
-                    注文確定を実行します。
+                注文確定を実行します。
+
                 </StyledButton>
             </Box>
             <Box sx={{ width: 200 }}>

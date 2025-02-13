@@ -373,7 +373,7 @@ export default function Infomation() {
                     color="primary"
 
                 >
-                    注文確定
+                    注文確定を実行
                 </StyledButton>
             </Box>
             <Box sx={{ width: 200 }}>

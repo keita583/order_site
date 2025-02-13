@@ -227,6 +227,7 @@ export default function Home() {
 
     <>
       <Box sx={{ display: 'flex', height: '100%', width: '100%', flexDirection: isMobile ? 'column' : 'row', backgroundColor: '#FFFAF0' }}>
+        
         <Box sx={{ display: 'flex', alignItems: 'left', flexDirection: 'column',width: isMobile ? '100%' : '55%', marginTop: '3%', marginLeft: isMobile ? '0' : '5%', backgroundColor: '#FFFAF0' }}>
           <Typography variant={isMobile ? "h4" : "h2"} sx={{ mb: 4, color: '#333', fontWeight: 'bold' }}>
             Dessert
@@ -295,7 +296,7 @@ export default function Home() {
         marginBottom: isMobile ? '20px' : '0px'
       }}>
           <Card variant="outlined">
-            <Typography sx={{ fontSize: isMobile ? 20 : 24, color: '#FF6600', fontWeight: 'bold', paddingLeft: '15px' }}>
+            <Typography sx={{ fontSize: isMobile ? 20 : 24, color: '#FF6600', borderRadius: "5px", paddingLeft: '15px' }}>
               Your Cart ({totalItemsCount})
             </Typography>
 
@@ -391,4 +392,6 @@ export default function Home() {
     </>
   );
 }
+
+
 

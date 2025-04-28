@@ -87,8 +87,10 @@ const StyledButton = styled(Button)({
 const fullWidthRegex = /^[^\x01-\x7E]{1,20}$/;
 
 const emailSchema = z.string().email("正しいメールアドレスを入力してください");
-const firstNameSchema = z.string().max(20, "姓は20文字以内にしてください。").regex(fullWidthRegex, "全角文字のみで入力してください。");
-const lastNameSchema = z.string().max(20, "名は20文字以内にしてください。").regex(fullWidthRegex, "全角文字のみで入力してください。");
+
+const firstNameSchema = z.string().max(100, "姓は100文字以内にしてください。").regex(fullWidthRegex, "全角文字のみで入力してください。");
+const lastNameSchema = z.string().max(100, "名は100文字以内にしてください。").regex(fullWidthRegex, "全角文字のみで入力してください。");
+
 const firstPostSchema = z.string().length(3, "郵便番号は3文字で入力してください。").regex(/^[0-9]{3}$/, "半角数字のみで3文字入力してください。");
 const lastPostSchema = z.string().length(4, "郵便番号は4文字で入力してください。").regex(/^[0-9]{4}$/, "半角数字のみで3文字入力してください。");
 const addressSchema = z.string().regex(fullWidthRegex, "全角文字のみで入力してください。");
@@ -191,8 +193,8 @@ export default function Infomation() {
                 height: "100vh",
                 backgroundColor: "#E6FFE9",
                 display: "flex",
-                justifyContent: "center",  // 縦方向の中央揃え
-                alignItems: "center",      // 横方向の中央揃え
+                justifyContent: "center",  // 縦方向の中央揃える
+                alignItems: "center",      // 横方向の中央揃える
                 flexDirection: "column",   // 縦に並べる
             }}
         >
@@ -215,7 +217,7 @@ export default function Infomation() {
                 }}
             >
                 <Typography variant="h4" sx={{ color: "black", fontWeight: "bold", mb: 2 }}>
-                    Infomation
+                    問い合わせ
                 </Typography>
 
                 <Box sx={{ width: "100%", mb: 2, display: "flex", flexDirection: "row", }}>
@@ -373,7 +375,8 @@ export default function Infomation() {
                     color="primary"
 
                 >
-                    注文確定を実行
+                注文確定を実行します。
+
                 </StyledButton>
             </Box>
             <Box sx={{ width: 200 }}>
